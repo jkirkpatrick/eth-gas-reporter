@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/cgewecke/eth-gas-reporter#readme",
   "peerDependencies": {
-    "@codechecks/client": "^0.1.0"
+    "@codechecks/client": "^0.0.50"
   },
   "peerDependenciesMeta": {
     "@codechecks/client": {
@@ -39,36 +39,58 @@
     }
   },
   "dependencies": {
-    "@ethersproject/abi": "^5.0.0-beta.146",
-    "@solidity-parser/parser": "^0.14.0",
-    "cli-table3": "^0.5.0",
+    "@ethersproject/abi": "^5.7.0",
+    "@solidity-parser/parser": "^0.16.0",
+    "cli-table3": "^0.6.3",
     "colors": "1.4.0",
-    "ethereum-cryptography": "^1.0.3",
-    "ethers": "^4.0.40",
+    "ethereum-cryptography": "^1.2.0",
+    "ethers": "^6.2.0",
     "fs-readdir-recursive": "^1.1.0",
-    "lodash": "^4.17.14",
-    "markdown-table": "^1.1.3",
-    "mocha": "^7.1.1",
+    "lodash": "^4.17.21",
+    "markdown-table": "^3.0.3",
+    "mocha": "^10.2.0",
     "req-cwd": "^2.0.0",
     "request": "^2.88.0",
-    "request-promise-native": "^1.0.5",
+    "request-promise-native": "^0.0.0",
     "sha1": "^1.1.1",
-    "sync-request": "^6.0.0"
+    "sync-request": "^6.1.0"
   },
   "devDependencies": {
-    "@codechecks/client": "^0.1.10",
-    "@nomiclabs/buidler": "^1.4.7",
-    "@nomiclabs/buidler-truffle5": "^1.3.4",
-    "@nomiclabs/buidler-web3": "^1.3.4",
-    "fp-ts": "^1.19.0",
-    "ganache-cli": "6.4.3",
-    "geth-dev-assistant": "^0.1.7",
-    "husky": "^2.3.0",
-    "prettier": "1.17.1",
-    "pretty-quick": "^1.11.0",
-    "randomstring": "^1.1.5",
-    "truffle": "5.0.12",
-    "web3": "^1.3.0",
-    "yarn": "^1.16.0"
+    "@codechecks/client": "^0.1.12",
+    "fp-ts": "^2.13.1",
+    "ganache": "^7.7.7",
+    "geth-dev-assistant": "^0.1.8",
+    "hardhat": "^2.13.0",
+    "husky": "^8.0.3",
+    "prettier": "2.8.6",
+    "pretty-quick": "^3.1.3",
+    "randomstring": "^1.2.3",
+    "web3": "^1.9.0"
+  },
+  "overrides": {
+    "geth-dev-assistant": {
+      "yargs": {
+        ".": "17.7.1",
+        "y18n": "5.0.1"
+      }
+    },
+    "mocha": {
+      "yargs": "17.7.1"
+    },
+    "cli-table3": {
+      "string-width": {
+        "strip-ansi": {
+          ".": "7.0.1",
+          "ansi-regex": "6.0.1"
+        }
+      }
+    },
+    "@codechecks/client": {
+      "marked": "4.3.0"
+    },
+    "marked-terminal": {
+      "marked": "4.3.0"
+    },
+    "marked": "4.3.0"
   }
 }
